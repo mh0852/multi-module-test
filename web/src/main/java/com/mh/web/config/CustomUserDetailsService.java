@@ -2,7 +2,10 @@ package com.mh.web.config;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mh.project.entity.model.SecUser;
+import com.mh.project.entity.model.User;
+import com.mh.project.entity.model.UserDe;
 import com.mh.service.ISecUserService;
+import com.mh.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -18,20 +21,25 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private ISecUserService userService;
+    private UserService userService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        QueryWrapper<SecUser> queryWrapper = new QueryWrapper<SecUser>();
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username",username);
-        SecUser secUser = userService.getBaseMapper().selectOne(queryWrapper);
-        if(secUser == null) {
+        User user = userService.getBaseMapper().selectOne(queryWrapper);
+        if(user == null) {
             throw new UsernameNotFoundException("not found");
         }
+        System.out.println(user.getUsername() + ": " + user.getPassword());
 
+        UserDe u1 = new UserDe();
+        u1.setUsername(user.getUsername());
+        u1.setPassword(user.getPassword());
+        u1.setId(user.getId());
 //        List<GrantedAuthority> authorities = new ArrayList<>();
 //        authorities.add(new SimpleGrantedAuthority("ROLE_"+ secUser.getRole()));
-        return (UserDetails) secUser;
+        return u1;
     }
 }

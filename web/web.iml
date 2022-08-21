@@ -60,7 +60,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_151/jre/../lib/jconsole.jar!/" />
+          <root url="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -69,7 +69,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_151/jre/../lib/tools.jar!/" />
+          <root url="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -77,11 +77,11 @@
     </orderEntry>
     <orderEntry type="module" module-name="entity" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-annotation:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.7.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.22" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.7.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.7.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.2" level="project" />
